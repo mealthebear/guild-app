@@ -103,7 +103,9 @@ typings/
 .tern-port
 
 # Webpack Bundle File
-dist/bundle.js
+bundle.js
+bundle.js.LICENSE.txt
+bundle.js.map
 
 #.DS_Store
 .DS_Store
