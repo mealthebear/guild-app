@@ -10,6 +10,7 @@ db.once('open', () => {
 const userSchema = new mongoose.Schema({
   name: String,
   class: String,
+  message: String,
   realm: String,
   spec: String,
 });
