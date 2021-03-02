@@ -5,9 +5,10 @@ const Inventory = () => {
   const inputFields = [
     { name: 'name', placeholder: 'Item Name', required: 'required' },
     { name: 'quantity', placeholder: 'Quantity', required: 'required' },
-    { heading: 'What would you like to do?', label: 'Create new item', name: 'action', required: 'required', type: 'radio', value: 'new' },
-    { label: 'Add quantity', name: 'action', type: 'radio', value:'add' },
-    { label: 'Subtract quantity', name: 'action', type: 'radio', value: 'subtract' },
+    { heading: 'What would you like to do?', label: 'Create new item', name: 'action', required: 'required', type: 'radio', defaultValue: 'new' },
+    { label: 'Add quantity', name: 'action', type: 'radio', defaultValue:'add' },
+    { label: 'Subtract quantity', name: 'action', type: 'radio', defaultValue: 'subtract' },
+    { label: 'Delete item', name: 'action', type: 'radio', defaultValue: 'delete' }
   ];
   return (
     <div>
