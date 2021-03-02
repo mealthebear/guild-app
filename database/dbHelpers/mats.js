@@ -16,6 +16,10 @@ const getAllMats = () => {
   return Mat.find({});
 };
 
+const getOneMat = (mat) => {
+  return Mat.find(mat)
+}
+
 const updateMat = (updatedInfo, existingMat) => {
   return Mat.replaceOne(existingMat, updatedInfo);
 }
@@ -24,5 +28,6 @@ module.exports = {
   createMat,
   deleteMat,
   getAllMats,
+  getOneMat,
   updateMat,
 };

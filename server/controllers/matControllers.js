@@ -1,7 +1,8 @@
 const { 
   createMat, 
   deleteMat, 
-  getAllMats, 
+  getAllMats,
+  getOneMat,
   updateMat,
 } = require('../../database/dbHelpers/mats.js');
 
@@ -35,6 +36,17 @@ const getAllMatsController = (req, res) => {
   });
 }
 
+const getOneMatController = (req, res) => {
+  console.log(req.body);
+  getOneMat()
+  .then((data) => {
+    res.status(200).send(data)
+  })
+  .catch((err) => {
+    res.status(400).send(err)
+  });
+}
+
 const updateMatController = (req, res) => {
   updateMat(updatedInfo, existingInfo)
   .then((data) => {
@@ -49,5 +61,6 @@ module.exports = {
   createMatController,
   deleteMatController,
   getAllMatsController,
+  getOneMatController,
   updateMatController,
 };

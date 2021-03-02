@@ -1,9 +1,9 @@
 import React, { useEffect, useState } from 'react';
 
-const Form = ({ heading, inputFields }) => {
+const Form = ({ getOneMat, heading, inputFields }) => {
   return (
     <>
-      <form>
+      <form onSubmit={getOneMat}>
         <h2>{heading}</h2>
         {inputFields.map((field, index) => {
           return <div key={index}>
@@ -16,6 +16,7 @@ const Form = ({ heading, inputFields }) => {
               name={field.name}
               placeholder={field.placeholder || null}
               required={field.required || null}
+              onClick={(e) => console.log(e.target.value)}
               type={field.type || 'text'}
               defaultValue={field.defaultValue || ''}
           />

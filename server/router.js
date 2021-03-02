@@ -3,6 +3,7 @@ const {
   createMatController,
   deleteMatController,
   getAllMatsController,
+  getOneMatController,
   updateMatController,
 } = require('./controllers/matControllers.js');
 const {
@@ -23,5 +24,8 @@ router.route('/mats')
   .get(getAllMatsController)
   .post(createMatController)
   .put(updateMatController)
+
+router.route('/onemat')
+  .get(getOneMatController)
 
 module.exports = router;
