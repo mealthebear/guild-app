@@ -1,11 +1,7 @@
-const Mat = require('../index.js');
+const { Mat } = require('../index.js');
 
 const createMat = (matInfo) => {
-  let newMat = new Mat(matInfo);
-  return newMat.save((err, mat) => {
-    if (err) return console.error(err);
-    console.log(mat);
-  });
+  return Mat.create(matInfo);
 }
 
 const deleteMat = (mat) => {

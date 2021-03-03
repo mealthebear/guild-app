@@ -7,13 +7,13 @@ const {
 } = require('../../database/dbHelpers/mats.js');
 
 const createMatController = (req, res) => {
-  return Promise.resolve(createMat(req.body)
+  createMat(req.body)
   .then((data) => {
     res.status(201).send(data)
   })
   .catch((err) => {
     res.status(401).send(err);
-  }));
+  });
 }
 
 const deleteMatController = (req, res) => {
