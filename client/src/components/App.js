@@ -37,15 +37,17 @@ const App = () => {
         params: { name: item }
       })
       console.log(response);
+      return response;
     } catch (err) {
       console.log(err);
+      return err;
     }
   }
 
   const httpMethodCheck = async (event, httpMethod, item, quantity) => {
     event.preventDefault();
+
     if (httpMethod === 'create') {
-      console.log('executed createMat request');
       createMat(item, quantity);
     }
     

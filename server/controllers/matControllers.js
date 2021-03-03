@@ -37,8 +37,7 @@ const getAllMatsController = (req, res) => {
 }
 
 const getOneMatController = (req, res) => {
-  console.log(req.body);
-  getOneMat()
+  getOneMat(req.query)
   .then((data) => {
     res.status(200).send(data)
   })
