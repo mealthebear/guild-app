@@ -3,6 +3,23 @@ import Inventory from '../pages/Inventory.js';
 import React, { useState } from 'react';
 
 const App = () => {
+  
+  const changeHandler = (event) => {
+    return event.target.value;
+  }
+
+  const createMat = async (item, quantity) => {
+    const mat = {
+      name: item,
+      quantity: quantity,
+    };
+    try {
+      const response = await axios.post('/api/mats', mat);
+      console.log(response);
+    } catch (err) {
+      console.log(err);
+    }
+  }
 
   const getAllMats = async () => {
     try {
@@ -14,13 +31,10 @@ const App = () => {
     }
   }
 
-  const getOneMat = async (event) => {
-    event.preventDefault()
-    console.log(event.target);
-    let nameOfMat = event.target.value;
+  const getOneMat = async (item) => {
     try {
       const response = axios.get('/api/onemat', {
-        params: { name: nameOfMat }
+        params: { name: item }
       })
       console.log(response);
     } catch (err) {
@@ -28,9 +42,30 @@ const App = () => {
     }
   }
 
-  const changeHandler = (event) => {
-    console.log(event.target, event.target.value);
-    return event.target;
+  const httpMethodCheck = async (event, httpMethod, item, quantity) => {
+    event.preventDefault();
+    if (httpMethod === 'create') {
+      console.log('executed createMat request');
+      createMat(item, quantity);
+    }
+    
+    if (httpMethod === 'add') {
+      try {
+        const mat = await getOneMat(item);
+        console.log(mat);
+      } catch (err) {
+        console.log(err);
+      }
+    }
+
+    if (httpMethod === 'subtract') {
+      try {
+        const mat = await getOneMat(item);
+        console.log(mat);
+      } catch (err) {
+        console.log(err);
+      }
+    }
   }
 
   const updateMat = async (newInfo, nameOfMat, action) => {
@@ -38,8 +73,9 @@ const App = () => {
       updatedInfo: newInfo,
       existingInfo: nameOfMat,
     }
+
     try {
-      const response = axios.put('/api/mats');
+      const response = axios.put('/api/mats', updateInfo);
       console.log(response);
     } catch (err) {
       console.log(err);
@@ -48,7 +84,7 @@ const App = () => {
 
   return (
     <>
-      <Inventory onChange={changeHandler} getOneMat={getOneMat}/>
+      <Inventory onChange={changeHandler} getOneMat={getOneMat} httpCheck={httpMethodCheck} />
     </>
   )  
 }

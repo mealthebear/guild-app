@@ -8,7 +8,7 @@ const Inventory = (props) => {
   return (
     <div>
       <h1>Welcome to the Inventory Page!</h1>
-      <form>
+      <form onSubmit={(event) => props.httpCheck(event, httpAction, matName, quantity)}>
         <h2>Guild Mats Form</h2>
         <input name="name" onChange={(event) => setMat(props.onChange(event))} placeholder="Item Name" required />
         <input name="quantity" onChange={(event) => setQuantity(props.onChange(event))} placeholder="Quantity" required />
