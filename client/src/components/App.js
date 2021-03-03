@@ -28,6 +28,11 @@ const App = () => {
     }
   }
 
+  const changeHandler = (event) => {
+    console.log(event.target, event.target.value);
+    return event.target;
+  }
+
   const updateMat = async (newInfo, nameOfMat, action) => {
     let updateInfo = {
       updatedInfo: newInfo,
@@ -43,7 +48,7 @@ const App = () => {
 
   return (
     <>
-      <Inventory getOneMat={getOneMat}/>
+      <Inventory onChange={changeHandler} getOneMat={getOneMat}/>
     </>
   )  
 }
