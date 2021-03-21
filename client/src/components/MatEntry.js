@@ -1,6 +1,9 @@
 import React, { useState } from 'react';
 
 const MatEntry = ({ mat, quantity }) => {
+  const [showNameUpdate, setNameBoolean] = useState(false);
+  const [showQuantityUpdate, setQuantityBoolean] = useState(false);
+
   return (
     <div>
       <h2>{mat}</h2><button type="button">Update Name</button>
