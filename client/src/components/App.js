@@ -1,20 +1,35 @@
 import axios from 'axios';
 import Inventory from '../pages/Inventory.js';
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 
 const App = () => {
+  const [listOfMats, setList] = useState([]);
+
+  useEffect(() => {
+    getAllMats()
+      .then((response) => {
+        console.log(response);
+        setList(response.data);
+      })
+      .catch((error) => {
+        console.log(error);
+      })
+  }, [])
   
   const changeHandler = (event) => {
     return event.target.value;
   }
 
-  const createMat = async (item, quantity) => {
+  const createMat = async (event, item, quantity) => {
+    event.preventDefault();
     const mat = {
       name: item,
       quantity: quantity,
     };
     try {
       const response = await axios.post('/api/mats', mat);
+      const matList = await getAllMats();
+      setList(matList.data);
       console.log(response);
     } catch (err) {
       console.log(err);
@@ -24,7 +39,6 @@ const App = () => {
   const getAllMats = async () => {
     try {
       const response = await axios.get('/api/mats');
-      console.log(response);
       return response;
     } catch (err) {
       console.log(err);
@@ -60,7 +74,12 @@ const App = () => {
 
   return (
     <>
-      <Inventory onChange={changeHandler} getOneMat={getOneMat} createMat={createMat} />
+      <Inventory 
+        createMat={createMat} 
+        getAllMats={getAllMats} 
+        listOfMats={listOfMats} 
+        onChange={changeHandler} 
+      />
     </>
   )  
 }
