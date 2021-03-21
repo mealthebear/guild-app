@@ -59,7 +59,7 @@ const App = () => {
     }
   }
 
-  const updateMat = async (newInfo, nameOfMat, action) => {
+  const updateMat = async (newInfo, nameOfMat) => {
     let updateInfo = {
       updatedInfo: newInfo,
       existingInfo: nameOfMat,
