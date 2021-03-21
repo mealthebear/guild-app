@@ -44,32 +44,6 @@ const App = () => {
     }
   }
 
-  const httpMethodCheck = async (event, httpMethod, item, quantity) => {
-    event.preventDefault();
-
-    if (httpMethod === 'create') {
-      createMat(item, quantity);
-    }
-    
-    if (httpMethod === 'add') {
-      try {
-        const mat = await getOneMat(item);
-        console.log(mat);
-      } catch (err) {
-        console.log(err);
-      }
-    }
-
-    if (httpMethod === 'subtract') {
-      try {
-        const mat = await getOneMat(item);
-        console.log(mat);
-      } catch (err) {
-        console.log(err);
-      }
-    }
-  }
-
   const updateMat = async (newInfo, nameOfMat, action) => {
     let updateInfo = {
       updatedInfo: newInfo,
@@ -86,7 +60,7 @@ const App = () => {
 
   return (
     <>
-      <Inventory onChange={changeHandler} getOneMat={getOneMat} httpCheck={httpMethodCheck} />
+      <Inventory onChange={changeHandler} getOneMat={getOneMat} createMat={createMat} />
     </>
   )  
 }
