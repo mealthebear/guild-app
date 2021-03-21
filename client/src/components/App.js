@@ -6,6 +6,7 @@ const App = () => {
   const [listOfMats, setList] = useState([]);
 
   useEffect(() => {
+    // Try to convert to async/await
     getAllMats()
       .then((response) => {
         console.log(response);
