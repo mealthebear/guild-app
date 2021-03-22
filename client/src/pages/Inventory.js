@@ -18,7 +18,7 @@ const Inventory = (props) => {
           <label className="form-label">Quantity</label>
           <input className="form-input" name="quantity" onChange={(event) => setQuantity(props.onChange(event))} placeholder="Enter Quantity" required />
         </div>
-        <input type="submit" value="Submit" />
+        <input className="confirm-button" type="submit" value="Add Item" />
         
       </form>
       <MatList mats={props.listOfMats} />
