@@ -7,9 +7,9 @@ const Inventory = (props) => {
 
   return (
     <div>
-      <h1 className="header">Welcome to the Inventory Page!</h1>
-      <form onSubmit={(event) => props.createMat(event, matName, quantity)}>
-        <h2 className="subheading">Add an Item to Inventory</h2>
+      <h1 className="heading">Welcome to the Inventory Page!</h1>
+      <form className="inventory-form" onSubmit={(event) => props.createMat(event, matName, quantity)}>
+        <h2 className="subheading form-title">Add an Item to Inventory</h2>
         <div className="input-field-group">
           <label className="form-label">Item Name</label>
           <input className="form-input" name="name" onChange={(event) => setMat(props.onChange(event))} placeholder="Enter Item" required />
