@@ -7,7 +7,7 @@ const Inventory = (props) => {
 
   return (
     <div>
-      <h1 className="heading">Welcome to the Inventory Page!</h1>
+      <h1 className="heading">Défiance Guild Inventory</h1>
       <form className="inventory-form" onSubmit={(event) => props.createMat(event, matName, quantity)}>
         <h2 className="subheading form-title">Add an Item to Inventory</h2>
         <div className="input-field-group">
