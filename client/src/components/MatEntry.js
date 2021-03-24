@@ -8,10 +8,10 @@ const MatEntry = ({ mat, quantity }) => {
 
   return (
     <div className="mat-entry">
-      <div className="mat-section-wrapper">
+      <div className="mat-name-wrapper mat-section-wrapper">
         <span className="mat-name">{mat}</span>
         {showNameUpdate ? <>
-        <input name="name" placeholder="Item Name" />
+        <input className="form-input mat-entry-input" name="name" placeholder="Item Name" />
         <button onClick={() => setNameBoolean(!showNameUpdate)} type="button">Confirm</button>
         <button onClick={() => setNameBoolean(!showNameUpdate)} type="button">X</button>
         </> :

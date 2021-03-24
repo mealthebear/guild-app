@@ -55,8 +55,13 @@ body {
 
 .mat-entry {
   margin: 10px 0;
-  padding: 10px;
   box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px, rgba(60, 64, 67, 0.15) 0px 2px 6px 2px;
+}
+
+.mat-entry-input {
+  bottom: 2px;
+  font-size: 0.5em;
+  position: relative;
 }
 
 .mat-list {
@@ -64,8 +69,14 @@ body {
   padding: 10px;
 }
 
+.mat-name-wrapper {
+  border-bottom: 1px solid #DDD;
+  font-size: 2em;
+}
+
 .mat-section-wrapper {
   margin: 10px 0;
+  padding: 20px;
 }
 
 .subheading {
