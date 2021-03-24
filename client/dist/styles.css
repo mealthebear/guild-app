@@ -3,6 +3,11 @@ body {
   padding: 0;
 }
 
+.cancel-button {
+  background-color: #e34949;
+  color: #fff;
+}
+
 .confirm-button {
   background-color: #01bd6f;
   border: none;
@@ -58,6 +63,17 @@ body {
   box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px, rgba(60, 64, 67, 0.15) 0px 2px 6px 2px;
 }
 
+.mat-entry-button {
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 0.8em;
+  position: relative;
+  padding: 5px 14px;
+  margin-left: 20px;
+  top: 2px;
+}
+
 .mat-entry-input {
   bottom: 2px;
   font-size: 0.5em;
@@ -81,4 +97,9 @@ body {
 
 .subheading {
   font-size: 1.75em;
+}
+
+.update-button {
+  background-color: #007bff;
+  color: #fff;
 }

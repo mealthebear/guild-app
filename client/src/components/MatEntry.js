@@ -12,8 +12,8 @@ const MatEntry = ({ mat, quantity }) => {
         <span className="mat-name">{mat}</span>
         {showNameUpdate ? <>
         <input className="form-input mat-entry-input" name="name" placeholder="Item Name" />
-        <button onClick={() => setNameBoolean(!showNameUpdate)} type="button">Confirm</button>
-        <button onClick={() => setNameBoolean(!showNameUpdate)} type="button">X</button>
+        <button className="mat-entry-button update-button" onClick={() => setNameBoolean(!showNameUpdate)} type="button">Confirm</button>
+        <button className="mat-entry-button cancel-button" onClick={() => setNameBoolean(!showNameUpdate)} type="button">X</button>
         </> :
         <button onClick={setNameBoolean} type="button">Update Name</button>
         }
@@ -23,8 +23,8 @@ const MatEntry = ({ mat, quantity }) => {
         <span className="mat-quantity">Quantity in stock: {quantity}</span>
         {showQuantityUpdate ? <>
         <input name="quantity" placeholder="Quantity" />
-        <button onClick={() => setQuantityBoolean(!showQuantityUpdate)} type="button">Confirm</button>
-        <button onClick={() => setQuantityBoolean(!showQuantityUpdate)} type="button">X</button>
+        <button className="mat-entry-button update-button" onClick={() => setQuantityBoolean(!showQuantityUpdate)} type="button">Confirm</button>
+        <button className="mat-entry-button cancel-button" onClick={() => setQuantityBoolean(!showQuantityUpdate)} type="button">X</button>
         </> :
         <button onClick={setQuantityBoolean} type="button">Update Quantity</button>
         }
