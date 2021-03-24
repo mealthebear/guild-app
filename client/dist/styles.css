@@ -95,11 +95,15 @@ body {
   padding: 20px;
 }
 
+.mat-quantity-wrapper {
+  font-size: 2em;
+}
+
 .subheading {
   font-size: 1.75em;
 }
 
 .update-button {
-  background-color: #007bff;
+  background-color: #008cff;
   color: #fff;
 }
