@@ -8,7 +8,7 @@ const MatEntry = ({ mat, quantity }) => {
 
   return (
     <div className="mat-entry">
-      <div className="mat-name-wrapper">
+      <div className="mat-section-wrapper">
         <span className="mat-name">{mat}</span>
         {showNameUpdate ? <>
         <input name="name" placeholder="Item Name" />
@@ -19,7 +19,7 @@ const MatEntry = ({ mat, quantity }) => {
         }
       </div>
       
-      <div className="mat-quantity-wrapper">
+      <div className="mat-section-wrapper">
         <span className="mat-quantity">Quantity in stock: {quantity}</span>
         {showQuantityUpdate ? <>
         <input name="quantity" placeholder="Quantity" />
