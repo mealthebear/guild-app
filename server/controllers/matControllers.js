@@ -47,6 +47,8 @@ const getOneMatController = (req, res) => {
 }
 
 const updateMatController = (req, res) => {
+  let updatedInfo = req.body.updatedInfo;
+  let existingInfo = req.body.name;
   updateMat(updatedInfo, existingInfo)
   .then((data) => {
     res.status(200).send(data)
