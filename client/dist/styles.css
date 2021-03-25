@@ -84,6 +84,17 @@ body {
   top: 2px;
 }
 
+.delete-button {
+  background-color: #e32d2d;
+  border-radius: 50%;
+  color: #fff;
+  float: right;
+  height: 36px;
+  margin: -12px;
+  outline: none;
+  width: 36px;
+}
+
 .mat-entry-input {
   bottom: 2px;
   font-size: 0.5em;

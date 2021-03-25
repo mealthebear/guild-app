@@ -23,7 +23,7 @@ const Inventory = (props) => {
         
       </form>
       <MatList mats={props.listOfMats} updateMat={props.updateMat} />
-      <ConfirmationModal message={`Are you sure you want to delete Widowbloom from inventory?`}/>
+      {/* <ConfirmationModal message={`Are you sure you want to delete Widowbloom from inventory?`}/> */}
     </div>
   )
 }

@@ -28,6 +28,7 @@ const MatEntry = ({ mat, quantity, updateMat }) => {
 
   return (
     <div className="mat-entry">
+      <button className="mat-entry-button delete-button" type="button">X</button>
       <div className="mat-name-wrapper mat-section-wrapper">
         <span className="mat-name">{mat}</span>
         {showNameUpdate ? <>
@@ -43,8 +44,8 @@ const MatEntry = ({ mat, quantity, updateMat }) => {
         <span className="mat-quantity">Quantity in stock: {quantity}</span>
         {showQuantityUpdate ? <>
         <input className="form-input mat-entry-input" onChange={(event) => setQuantity(event.target.value)} name="quantity" placeholder="Quantity" />
-        <button className="mat-entry-button confirm-button" onClick={() => confirmQuantityUpdate({ quantity: matQuantity }, { name: mat })} type="button">Confirm</button>
-        <button className="mat-entry-button cancel-button" onClick={() => resetQuantity()} type="button">Cancel</button>
+        <button className="confirm-button mat-entry-button" onClick={() => confirmQuantityUpdate({ quantity: matQuantity }, { name: mat })} type="button">Confirm</button>
+        <button className="cancel-button mat-entry-button" onClick={() => resetQuantity()} type="button">Cancel</button>
         </> :
         <button className="mat-entry-button update-button" onClick={setQuantityBoolean} type="button">Update Quantity</button>
         }
