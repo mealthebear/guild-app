@@ -17,7 +17,7 @@ const getOneMat = (mat) => {
 }
 
 const updateMat = (updatedInfo, existingMat) => {
-  return Mat.replaceOne(existingMat, updatedInfo);
+  return Mat.updateOne(existingMat, updatedInfo);
 }
 
 module.exports = {
