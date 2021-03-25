@@ -21,7 +21,7 @@ const Inventory = (props) => {
         <input className="confirm-button" type="submit" value="Add Item" />
         
       </form>
-      <MatList mats={props.listOfMats} />
+      <MatList mats={props.listOfMats} updateMat={props.updateMat} />
     </div>
   )
 }

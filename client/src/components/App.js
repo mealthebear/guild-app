@@ -62,11 +62,13 @@ const App = () => {
   const updateMat = async (newInfo, nameOfMat) => {
     let updateInfo = {
       updatedInfo: newInfo,
-      existingInfo: nameOfMat,
+      name: nameOfMat,
     }
-
+    console.log('** This is the updated info **', updateInfo);
     try {
-      const response = axios.put('/api/mats', updateInfo);
+      const response = await axios.put('/api/mats', updateInfo);
+      const matList = await getAllMats();
+      setList(matList.data);
       console.log(response);
     } catch (err) {
       console.log(err);
@@ -80,6 +82,7 @@ const App = () => {
         getAllMats={getAllMats} 
         listOfMats={listOfMats} 
         onChange={changeHandler} 
+        updateMat={updateMat}
       />
     </>
   )  
