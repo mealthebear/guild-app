@@ -1,3 +1,4 @@
+import ConfirmationModal from '../components/ConfirmationModal.js';
 import MatList from '../components/MatList.js';
 import React, { useEffect, useState } from 'react';
 
@@ -22,6 +23,7 @@ const Inventory = (props) => {
         
       </form>
       <MatList mats={props.listOfMats} updateMat={props.updateMat} />
+      <ConfirmationModal message={`Are you sure you want to delete Widowbloom from inventory?`}/>
     </div>
   )
 }

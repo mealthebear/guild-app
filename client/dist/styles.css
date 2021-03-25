@@ -102,6 +102,19 @@ body {
   font-size: 2em;
 }
 
+.modal-button {
+  margin: 0 5px;
+}
+
+.modal-buttons-group {
+  display: flex;
+  justify-content: center;
+}
+
+.modal-message {
+  text-align: center;
+}
+
 .subheading {
   font-size: 1.75em;
 }
