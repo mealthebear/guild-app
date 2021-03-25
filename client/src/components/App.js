@@ -37,6 +37,18 @@ const App = () => {
     }
   }
 
+  const deleteMat = async (nameOfMat) => {
+    let matToBeDeleted = { name: nameOfMat };
+    try {
+      const response = await axios.delete('/api/mats', matToBeDeleted);
+      const matList = await getAllMats();
+      setList(matList);
+      console.log(response);
+    } catch (error) {
+      console.log(error);
+    }
+  }
+
   const getAllMats = async () => {
     try {
       const response = await axios.get('/api/mats');
