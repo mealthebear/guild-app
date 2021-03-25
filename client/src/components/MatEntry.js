@@ -33,7 +33,7 @@ const MatEntry = ({ mat, quantity, updateMat }) => {
         {showNameUpdate ? <>
         <input className="form-input mat-entry-input" onChange={(event) => setMat(event.target.value)} name="name" placeholder="Item Name" />
         <button className="mat-entry-button confirm-button" onClick={() => confirmNameUpdate({ name: matName }, { name: mat })} type="button">Confirm</button>
-        <button className="mat-entry-button cancel-button" onClick={() => resetName()} type="button">X</button>
+        <button className="mat-entry-button cancel-button" onClick={() => resetName()} type="button">Cancel</button>
         </> :
         <button className="mat-entry-button update-button" onClick={setNameBoolean} type="button">Update Name</button>
         }
@@ -44,7 +44,7 @@ const MatEntry = ({ mat, quantity, updateMat }) => {
         {showQuantityUpdate ? <>
         <input className="form-input mat-entry-input" onChange={(event) => setQuantity(event.target.value)} name="quantity" placeholder="Quantity" />
         <button className="mat-entry-button confirm-button" onClick={() => confirmQuantityUpdate({ quantity: matQuantity }, { name: mat })} type="button">Confirm</button>
-        <button className="mat-entry-button cancel-button" onClick={() => resetQuantity()} type="button">X</button>
+        <button className="mat-entry-button cancel-button" onClick={() => resetQuantity()} type="button">Cancel</button>
         </> :
         <button className="mat-entry-button update-button" onClick={setQuantityBoolean} type="button">Update Quantity</button>
         }
