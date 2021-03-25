@@ -89,11 +89,12 @@ const App = () => {
 
   return (
     <>
-      <Inventory 
-        createMat={createMat} 
-        getAllMats={getAllMats} 
-        listOfMats={listOfMats} 
-        onChange={changeHandler} 
+      <Inventory
+        createMat={createMat}
+        deleteMat={deleteMat}
+        getAllMats={getAllMats}
+        listOfMats={listOfMats}
+        onChange={changeHandler}
         updateMat={updateMat}
       />
     </>

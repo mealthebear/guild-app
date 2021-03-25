@@ -28,7 +28,7 @@ const MatEntry = ({ mat, quantity, updateMat }) => {
 
   return (
     <div className="mat-entry">
-      <button className="mat-entry-button delete-button" type="button">X</button>
+      <button className="mat-entry-button delete-button" name={mat} type="button">X</button>
       <div className="mat-name-wrapper mat-section-wrapper">
         <span className="mat-name">{mat}</span>
         {showNameUpdate ? <>
