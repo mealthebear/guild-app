@@ -4,8 +4,14 @@ import React, { useEffect, useState } from 'react';
 
 const Inventory = (props) => {
   const [matName, setMat] = useState('');
+  const [matToBeDeleted, setDeletedMat] = useState('');
   const [showModal, setModalBoolean] = useState(false);
   const [quantity, setQuantity] = useState(0);
+
+  const setModal = (event) => {
+    setModalBoolean(!showModal);
+    setDeletedMat(event.target.name);
+  }
 
   return (
     <div>
@@ -24,12 +30,16 @@ const Inventory = (props) => {
         
       </form>
       <MatList 
-        mats={props.listOfMats} 
-        setModalBoolean={setModalBoolean} 
-        showModal={showModal} 
-        updateMat={props.updateMat} 
+        mats={props.listOfMats}
+        setModal={setModal}
+        updateMat={props.updateMat}
       />
-      {showModal ? <ConfirmationModal deleteMat={props.deleteMat} setModalBoolean={setModalBoolean} showModal={showModal} /> : null}
+      {showModal ? 
+      <ConfirmationModal 
+        deleteMat={props.deleteMat} 
+        mat={matToBeDeleted} 
+        setModalBoolean={setModalBoolean} 
+        showModal={showModal} /> : null}
     </div>
   )
 }

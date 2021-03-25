@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 
-const MatEntry = ({ mat, setModalBoolean, showModal, quantity, updateMat }) => {
+const MatEntry = ({ mat, setModal, quantity, updateMat }) => {
   const [matName, setMat] = useState('');
   const [matQuantity, setQuantity] = useState(0);
   const [showNameUpdate, setNameBoolean] = useState(false);
@@ -28,7 +28,7 @@ const MatEntry = ({ mat, setModalBoolean, showModal, quantity, updateMat }) => {
 
   return (
     <div className="mat-entry">
-      <button className="mat-entry-button delete-button" onClick={() => setModalBoolean(!showModal)} name={mat} type="button">X</button>
+      <button className="mat-entry-button delete-button" onClick={(event) => setModal(event)} name={mat} type="button">X</button>
       <div className="mat-name-wrapper mat-section-wrapper">
         <span className="mat-name">{mat}</span>
         {showNameUpdate ? <>
