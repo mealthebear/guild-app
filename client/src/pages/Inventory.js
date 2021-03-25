@@ -4,6 +4,7 @@ import React, { useEffect, useState } from 'react';
 
 const Inventory = (props) => {
   const [matName, setMat] = useState('');
+  const [showModal, setModalBoolean] = useState(false);
   const [quantity, setQuantity] = useState(0);
 
   return (
@@ -22,8 +23,13 @@ const Inventory = (props) => {
         <input className="confirm-button" type="submit" value="Add Item" />
         
       </form>
-      <MatList mats={props.listOfMats} updateMat={props.updateMat} />
-      <ConfirmationModal deleteMat={props.deleteMat}/>
+      <MatList 
+        mats={props.listOfMats} 
+        setModalBoolean={setModalBoolean} 
+        showModal={showModal} 
+        updateMat={props.updateMat} 
+      />
+      {showModal ? <ConfirmationModal deleteMat={props.deleteMat} setModalBoolean={setModalBoolean} showModal={showModal} /> : null}
     </div>
   )
 }
