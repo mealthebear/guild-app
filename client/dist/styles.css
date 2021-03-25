@@ -23,6 +23,14 @@ body {
   background-color: #0a9069
 }
 
+.confirmation-modal {
+  left: 50%;
+  position: fixed;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 10;
+}
+
 .form-input {
   border: 1px solid #c3cad8;
   border-radius: 4px;
