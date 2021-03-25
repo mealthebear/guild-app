@@ -29,6 +29,10 @@ body {
   top: 50%;
   transform: translate(-50%, -50%);
   z-index: 10;
+  background-color: #555;
+  font-size: 2em;
+  color: white;
+  border-radius: 10px;
 }
 
 .form-input {
@@ -128,9 +132,13 @@ body {
 .modal-buttons-group {
   display: flex;
   justify-content: center;
+  padding: 10px;
 }
 
 .modal-message {
+  border-bottom: 1px solid #fff;
+  margin: 0;
+  padding: 10px;
   text-align: center;
 }
 
