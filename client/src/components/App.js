@@ -44,7 +44,7 @@ const App = () => {
         data: matToBeDeleted,
       });
       const matList = await getAllMats();
-      setList(matList);
+      setList(matList.data);
       console.log(response);
     } catch (error) {
       console.log(error);
