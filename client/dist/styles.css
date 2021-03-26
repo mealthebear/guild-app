@@ -6,6 +6,11 @@ body {
 .cancel-button {
   background-color: #e34949;
   color: #fff;
+  transition: 0.3s ease;
+}
+
+.cancel-button:hover {
+  background-color: #bf3d3d;
 }
 
 .confirm-button {
@@ -101,7 +106,14 @@ body {
   height: 36px;
   margin: -12px;
   outline: none;
+  transition: 0.3s ease;
   width: 36px;
+}
+
+.delete-button:hover {
+  background-color: #bf3d3d;
+  height: 48px;
+  width: 48px;
 }
 
 .mat-entry-input {
@@ -157,4 +169,9 @@ body {
   background-color: #008cff;
   color: #fff;
   top: -2px;
+  transition: 0.3s ease;
+}
+
+.update-button:hover {
+  background-color: #006fc9;
 }
