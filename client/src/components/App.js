@@ -1,6 +1,8 @@
 import axios from 'axios';
 import Inventory from '../pages/Inventory.js';
+import Landing from '../pages/Landing.js';
 import React, { useEffect, useState } from 'react';
+import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
 
 const App = () => {
   const [listOfMats, setList] = useState([]);
@@ -91,14 +93,23 @@ const App = () => {
 
   return (
     <>
-      <Inventory
-        createMat={createMat}
-        deleteMat={deleteMat}
-        getAllMats={getAllMats}
-        listOfMats={listOfMats}
-        onChange={changeHandler}
-        updateMat={updateMat}
-      />
+      <Router>
+        <Switch>
+          <Route exact path="/">
+            <Landing />
+          </Route>
+          <Route exact path="/bank">
+            <Inventory
+              createMat={createMat}
+              deleteMat={deleteMat}
+              getAllMats={getAllMats}
+              listOfMats={listOfMats}
+              onChange={changeHandler}
+              updateMat={updateMat}
+            />
+          </Route>
+        </Switch>
+      </Router>
     </>
   )  
 }
