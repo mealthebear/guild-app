@@ -149,4 +149,5 @@ body {
 .update-button {
   background-color: #008cff;
   color: #fff;
+  top: -2px;
 }
