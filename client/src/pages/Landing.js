@@ -9,7 +9,7 @@ const Landing = () => {
           <h2 className="heading heading-landing">Hello, we are Défiance</h2>
           <div>
             <p className="heading-landing-text">
-              We're a nifty little guild on Alexstrasza / Terokkar. 
+              We're a nifty little guild on Alexstrasza / Terokkar (US). 
               Interested in raiding with us?
               Click the button on the right!
             </p>
