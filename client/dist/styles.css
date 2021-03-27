@@ -60,11 +60,27 @@ body {
   padding: 0 0.5em;
 }
 
+.form-input-landing {
+  background-color: #0f3b57;
+  border: none;
+  box-sizing: border-box;
+  color: #fff;
+  font-size: 1.5em;
+  height: 2.5em;
+  outline-color: #80dbff;
+  padding: 0 1em;
+  width: 80%;
+}
+
 .form-label {
   display: block;
   font-size: 1em;
   margin: 0 0 12px 2px;
   width: 100%;
+}
+
+.form-label-landing {
+  display: block;
 }
 
 .header-image {
@@ -137,6 +153,11 @@ body {
   margin: 20px 0;
 }
 
+.input-field-group-landing {
+  display: inline-block;
+  width: 50%;
+}
+
 .inventory-form {
   padding: 10px;
   margin: 20px;
@@ -145,6 +166,15 @@ body {
 
 .landing-form {
   background-color: #0b2b40;
+}
+
+.landing-form-submit {
+  position: static;
+  top: 0;
+}
+
+.landing-message-group {
+  width: 100%;
 }
 
 .landing-section {
@@ -216,6 +246,18 @@ body {
 
 .mat-quantity-wrapper {
   font-size: 2em;
+}
+
+.message-input-landing {
+  background-color: #0f3b57;
+  border: none;
+  box-sizing: border-box;
+  color: #fff;
+  font-size: 1.5em;
+  height: 2.5em;
+  outline-color: #80dbff;
+  padding: 0 1em;
+  width: 90%;
 }
 
 .modal-button {

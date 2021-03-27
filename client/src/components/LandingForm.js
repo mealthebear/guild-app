@@ -11,16 +11,16 @@ const LandingForm = (props) => {
   return (
     <form>
       {inputs.map((input, index) => {
-        return <div className="input-field-group-landing">
-          <label>{input.label}</label>
+        return <div className="input-field-group-landing" key={index}>
+          <label className="form-label-landing">{input.label}</label>
           <input className="form-input-landing" />
         </div>
       })}
       <div className="input-field-group-landing landing-message-group">
-        <label>Message</label>
-        <input className="form-input-landing" />
+        <label className="form-label-landing">Message</label>
+        <input className="message-input-landing" />
       </div>
-      <input className="landing-form-submit" type="submit" value="Send Message" />
+      <input className="heading-landing-button landing-form-submit" type="submit" value="Send Message" />
     </form>
   )
 }
