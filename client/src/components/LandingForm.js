@@ -9,7 +9,7 @@ const LandingForm = (props) => {
   ];
 
   return (
-    <form>
+    <form id="landing-form">
       {inputs.map((input, index) => {
         return <div className="input-field-group-landing" key={index}>
           <label className="form-label-landing">{input.label}</label>

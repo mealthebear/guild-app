@@ -14,7 +14,7 @@ const Landing = () => {
               Interested in raiding with us?
               Click the button on the right!
             </p>
-            <button className="heading-landing-button" type="button">Message Us!</button>
+            <a href="#landing-form"><button className="heading-landing-button" type="button">Message Us!</button></a>
           </div>
         </div>
       </section>
