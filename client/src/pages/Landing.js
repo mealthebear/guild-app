@@ -1,3 +1,4 @@
+import LandingForm from '../components/LandingForm.js';
 import React, { useEffect, useState } from 'react';
 
 const Landing = () => {
@@ -17,7 +18,7 @@ const Landing = () => {
           </div>
         </div>
       </section>
-      <section className="bio-container">
+      <section className="bio-container landing-section">
         <h2 className="subheading subheading-bio">About Us</h2>
         <p className="bio-text">
           Défiance is an original guild dating back to the beginnings of WoW.
@@ -29,6 +30,9 @@ const Landing = () => {
           If you're interested in joining, feel free to drop us a line 
           down below!
         </p>
+      </section>
+      <section className="landing-section landing-form">
+        <LandingForm />
       </section>
     </>
   )
