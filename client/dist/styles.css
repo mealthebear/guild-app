@@ -8,11 +8,12 @@ body {
   color: white;
   font-family: 'Open Sans', sans-serif;
   margin: 0 auto;
-  padding: 3em 10% 0;
+  padding: 3em 10%;
 }
 
 .bio-text {
-  
+  font-size: 1.25em;
+  line-height: 1.5em;
 }
 
 .cancel-button {
