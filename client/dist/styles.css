@@ -86,7 +86,7 @@ body {
 .heading-landing-button {
   background: none;
   border: 2px solid #fff;
-  color: white;
+  color: #fff;
   cursor: pointer;
   font-family: 'Open Sans', sans-serif;
   font-size: clamp(14px, 3vw, 24px);
@@ -96,6 +96,12 @@ body {
   padding: 12px 32px;
   position: absolute;
   top: 50%;
+  transition: 0.3s ease;
+}
+
+.heading-landing-button:hover {
+  color: #80dbff;
+  border-color: #80dbff;
 }
 
 .heading-landing-container {
