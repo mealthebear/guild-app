@@ -32,7 +32,7 @@ body {
 .confirmation-modal {
   background-color: #555;
   border-radius: 10px;
-  color: white;
+  color: #fff;
   font-family: 'Open Sans', sans-serif;
   font-size: 2em;
   left: 50%;
@@ -62,10 +62,47 @@ body {
   
 }
 
+.header-image {
+  display: block;
+  filter: brightness(0.4);
+  max-height: 100%;
+  max-width: 100%;
+}
+
 .heading {
   font-family: 'Inter', sans-serif;
   font-size: 2.5em;
   text-align: center;
+}
+
+.heading-landing {
+  border-bottom: 1px solid #fff;
+  font-size: clamp(20px, 5vw, 72px);
+  margin: 0;
+  padding: 0 0 20px;
+  text-align: left;
+}
+
+.heading-landing-container {
+  position: relative;
+}
+
+.heading-landing-text {
+  font-family: 'Open Sans', sans-serif;
+  font-size: clamp(14px, 2vw, 24px);
+  margin: 0;
+  padding: 20px 0 0;
+}
+
+.heading-landing-text-box {
+  color: #fff;
+  left: 50%;
+  position: absolute;
+  text-align: left;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  width: 80%;
+  z-index: 5;
 }
 
 .input-field-group {
