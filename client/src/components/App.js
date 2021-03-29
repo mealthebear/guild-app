@@ -9,6 +9,7 @@ const App = () => {
   const [listOfMats, setList] = useState([]);
 
   useEffect(() => {
+    verifyUser()
     // Try to convert to async/await
     getAllMats()
       .then((response) => {
@@ -131,6 +132,15 @@ const App = () => {
       const response = await axios.put('/api/mats', updateInfo);
       const matList = await getAllMats();
       setList(matList.data);
+      console.log(response);
+    } catch (err) {
+      console.log(err);
+    }
+  }
+
+  const verifyUser = async () => {
+    try {
+      const response = await axios.get('/verify-token');
       console.log(response);
     } catch (err) {
       console.log(err);
