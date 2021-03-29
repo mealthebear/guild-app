@@ -8,11 +8,11 @@ db.once('open', () => {
 });
 
 const userSchema = new mongoose.Schema({
-  name: String,
-  class: String,
   message: String,
+  name: String,
   realm: String,
   spec: String,
+  tag: String,
 });
 
 const matSchema = new mongoose.Schema({
