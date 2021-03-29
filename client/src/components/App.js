@@ -1,6 +1,7 @@
 import axios from 'axios';
 import Inventory from '../pages/Inventory.js';
 import Landing from '../pages/Landing.js';
+import Login from '../pages/Login.js';
 import React, { useEffect, useState } from 'react';
 import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
 
@@ -117,6 +118,9 @@ const App = () => {
               onChange={changeHandler}
               updateMat={updateMat}
             />
+          </Route>
+          <Route exact path="/login">
+            <Login />
           </Route>
         </Switch>
       </Router>

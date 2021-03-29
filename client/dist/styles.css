@@ -38,6 +38,10 @@ body {
   background-color: #0a9069
 }
 
+.confirm-button-login {
+  width: 100%;
+}
+
 .confirmation-modal {
   background-color: #555;
   border-radius: 10px;
@@ -70,6 +74,11 @@ body {
   outline-color: #80dbff;
   padding: 0 1em;
   width: 80%;
+}
+
+.form-input-login {
+  box-sizing: border-box;
+  width: 100%;
 }
 
 .form-label {
@@ -184,6 +193,11 @@ body {
   font-family: 'Open Sans', sans-serif;
   margin: 0 auto;
   padding: 3em 10%;
+}
+
+.login-form {
+  margin: 0 auto;
+  width: 40%;
 }
 
 .mat-entry {
