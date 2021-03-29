@@ -1,10 +1,10 @@
 import UserLoginForm from '../components/UserLoginForm.js';
 import React, { useState } from 'react';
 
-const Login = () => {
+const Login = (props) => {
   return (
     <>
-      <UserLoginForm />
+      <UserLoginForm getAdmin={props.getAdmin} />
     </>
   )
 }

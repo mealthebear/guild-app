@@ -64,6 +64,17 @@ const App = () => {
     }
   }
 
+  const getAdmin = async (user) => {
+    try {
+      const response = await axios.get('/api/admins', {
+        params: user,
+      });
+      console.log(response);
+    } catch (err) {
+      console.log(err);
+    }
+  }
+
   const getAllMats = async () => {
     try {
       const response = await axios.get('/api/mats');
@@ -120,7 +131,7 @@ const App = () => {
             />
           </Route>
           <Route exact path="/login">
-            <Login />
+            <Login getAdmin={getAdmin} />
           </Route>
         </Switch>
       </Router>
