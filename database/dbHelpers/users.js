@@ -1,11 +1,7 @@
 const { User } = require('../index.js');
 
 const createUser = (userInfo) => {
-  let newUser = new User(userInfo);
-  return newUser.save((err, user) => {
-    if (err) return console.error(err);
-    console.log(user);
-  });
+  return User.create(userInfo);
 }
 
 const deleteUser = (user) => {
