@@ -1,8 +1,16 @@
-const { response } = require('express');
-const { getAdmin } = require('../../database/dbHelpers/admins.js');
+const { createAdmin, getAdmin } = require('../../database/dbHelpers/admins.js');
+
+const createAdminController = (req, res) => {
+  createAdmin(req.body)
+    .then((data) => {
+      res.status(201).send(data)
+    }).catch((err) => {
+      res.status(400).send(err)
+    });
+}
 
 const getAdminController = (req, res) => {
-  getAdmin(req.body)
+  getAdmin(req.query)
     .then((data) => {
       res.status(200).send(data)
     }).catch((err) => {
@@ -10,4 +18,4 @@ const getAdminController = (req, res) => {
     });
 }
 
-module.exports = { getAdminController };
+module.exports = { createAdminController, getAdminController };

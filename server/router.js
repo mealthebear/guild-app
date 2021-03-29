@@ -1,6 +1,6 @@
 const router = require('express').Router();
 
-const { getAdminController } = require('./controllers/adminControllers.js');
+const { createAdminController, getAdminController } = require('./controllers/adminControllers.js');
 
 const {
   createMatController,
@@ -16,8 +16,9 @@ const {
   updateUserController,
 } = require('./controllers/userControllers.js');
 
-router.route('/admin')
+router.route('/admins')
   .get(getAdminController)
+  .post(createAdminController)
 
 router.route('/users')
   .delete(deleteUserController)
