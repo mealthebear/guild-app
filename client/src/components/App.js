@@ -14,7 +14,6 @@ const App = () => {
     // Try to convert to async/await
     getAllMats()
       .then((response) => {
-        console.log(response);
         setList(response.data);
       })
       .catch((error) => {
@@ -50,7 +49,6 @@ const App = () => {
       const response = await axios.post('/api/mats', mat);
       const matList = await getAllMats();
       setList(matList.data);
-      console.log(response);
     } catch (err) {
       console.log(err);
     }
@@ -60,7 +58,7 @@ const App = () => {
     event.preventDefault();
     try {
       const response = await axios.post('/api/users', user);
-      console.log(response);
+      return response;
     } catch (err) {
       console.log(err);
     }
@@ -74,7 +72,6 @@ const App = () => {
       });
       const matList = await getAllMats();
       setList(matList.data);
-      console.log(response);
     } catch (error) {
       console.log(error);
     }
@@ -85,7 +82,6 @@ const App = () => {
       const response = await axios.get('/api/admins', {
         params: user,
       });
-      console.log(response);
       return response;
     } catch (err) {
       console.log(err);
@@ -104,7 +100,6 @@ const App = () => {
   const getToken = async (user) => {
     try {
       const response = await axios.post('/auth', user)
-      console.log(response);
     } catch (err) {
       console.log(err);
     }
@@ -115,7 +110,6 @@ const App = () => {
       const response = axios.get('/api/onemat', {
         params: { name: item }
       })
-      console.log(response);
       return response;
     } catch (err) {
       console.log(err);
@@ -128,12 +122,10 @@ const App = () => {
       updatedInfo: newInfo,
       name: nameOfMat,
     }
-    console.log('** This is the updated info **', updateInfo);
     try {
       const response = await axios.put('/api/mats', updateInfo);
       const matList = await getAllMats();
       setList(matList.data);
-      console.log(response);
     } catch (err) {
       console.log(err);
     }
