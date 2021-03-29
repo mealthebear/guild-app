@@ -12,6 +12,11 @@ body {
   line-height: 1.5em;
 }
 
+.blue-gradient {
+  height: 100vh;
+  width: 100%;
+}
+
 .cancel-button {
   background-color: #e34949;
   color: #fff;
@@ -39,7 +44,12 @@ body {
 }
 
 .confirm-button-login {
+  background-color: #38c8ff;
   width: 100%;
+}
+
+.confirm-button-login:hover {
+  background-color: #20a3d6;
 }
 
 .confirmation-modal {
@@ -196,7 +206,13 @@ body {
 }
 
 .login-form {
+  background-color: #fff;
   margin: 0 auto;
+  left: 50%;
+  padding: 3em;
+  position: absolute;
+  top: 50%;
+  transform: translate(-50%, -50%);
   width: 40%;
 }
 
@@ -302,6 +318,11 @@ body {
 .subheading-bio {
   font-size: 2.5em;
   margin-top: 0;
+}
+
+.subheading-login {
+  color: #38c8ff;
+  margin: 0;
 }
 
 .update-button {
