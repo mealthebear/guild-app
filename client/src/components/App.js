@@ -39,6 +39,16 @@ const App = () => {
     }
   }
 
+  const createUser = async (event, user) => {
+    event.preventDefault();
+    try {
+      const response = await axios.post('/api/users', user);
+      console.log(response);
+    } catch (err) {
+      console.log(err);
+    }
+  }
+
   const deleteMat = async (nameOfMat) => {
     let matToBeDeleted = { name: nameOfMat };
     try {
@@ -96,7 +106,7 @@ const App = () => {
       <Router>
         <Switch>
           <Route exact path="/">
-            <Landing />
+            <Landing createUser={createUser} />
           </Route>
           <Route exact path="/bank">
             <Inventory

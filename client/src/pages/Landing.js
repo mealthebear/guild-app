@@ -1,7 +1,7 @@
 import LandingForm from '../components/LandingForm.js';
 import React, { useEffect, useState } from 'react';
 
-const Landing = () => {
+const Landing = (props) => {
   return (
     <>
       <section className="heading-landing-container">
@@ -32,7 +32,7 @@ const Landing = () => {
         </p>
       </section>
       <section className="landing-section landing-form">
-        <LandingForm />
+        <LandingForm createUser={props.createUser} />
       </section>
     </>
   )
