@@ -1,4 +1,4 @@
-const User = require('../index.js');
+const { User } = require('../index.js');
 
 const createUser = (userInfo) => {
   let newUser = new User(userInfo);
