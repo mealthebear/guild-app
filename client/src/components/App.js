@@ -24,7 +24,8 @@ const App = () => {
     try {
       const response = await getAdmin(user);
       if (response.data.length) {
-        console.log('Login successful!');
+        const { username } = user;
+        getToken({ username });
       } else {
         console.log('Login credentials invalid');
       }
@@ -93,6 +94,15 @@ const App = () => {
     try {
       const response = await axios.get('/api/mats');
       return response;
+    } catch (err) {
+      console.log(err);
+    }
+  }
+
+  const getToken = async (user) => {
+    try {
+      const response = await axios.post('/auth', user)
+      console.log(response);
     } catch (err) {
       console.log(err);
     }
