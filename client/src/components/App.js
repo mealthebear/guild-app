@@ -19,7 +19,20 @@ const App = () => {
         console.log(error);
       })
   }, [])
-  
+
+  const authenticateUser = async (user) => {
+    try {
+      const response = await getAdmin(user);
+      if (response.data.length) {
+        console.log('Login successful!');
+      } else {
+        console.log('Login credentials invalid');
+      }
+    } catch (err) {
+      console.log(err);
+    }
+  }
+
   const changeHandler = (event) => {
     return event.target.value;
   }
@@ -70,6 +83,7 @@ const App = () => {
         params: user,
       });
       console.log(response);
+      return response;
     } catch (err) {
       console.log(err);
     }
@@ -131,7 +145,7 @@ const App = () => {
             />
           </Route>
           <Route exact path="/login">
-            <Login getAdmin={getAdmin} />
+            <Login authenticateUser={authenticateUser} />
           </Route>
         </Switch>
       </Router>

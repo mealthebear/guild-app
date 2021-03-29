@@ -10,7 +10,7 @@ const UserLoginForm = (props) => {
       password: password,
       username: username,
     };
-    props.getAdmin(userObject);
+    props.authenticateUser(userObject);
   }
 
   return (

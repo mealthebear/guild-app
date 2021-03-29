@@ -4,7 +4,7 @@ import React, { useState } from 'react';
 const Login = (props) => {
   return (
     <>
-      <UserLoginForm getAdmin={props.getAdmin} />
+      <UserLoginForm authenticateUser={props.authenticateUser} />
     </>
   )
 }
