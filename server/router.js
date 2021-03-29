@@ -1,4 +1,7 @@
 const router = require('express').Router();
+
+const { getAdminController } = require('./controllers/adminControllers.js');
+
 const {
   createMatController,
   deleteMatController,
@@ -12,6 +15,9 @@ const {
   getAllUsersController,
   updateUserController,
 } = require('./controllers/userControllers.js');
+
+router.route('/admin')
+  .get(getAdminController)
 
 router.route('/users')
   .delete(deleteUserController)

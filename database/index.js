@@ -7,6 +7,11 @@ db.once('open', () => {
   console.log('We are connected to MongoDB!');
 });
 
+const adminSchema = new mongoose.Schema({
+  password: String,
+  username: String,
+});
+
 const userSchema = new mongoose.Schema({
   message: String,
   name: String,
@@ -20,7 +25,8 @@ const matSchema = new mongoose.Schema({
   quantity: Number,
 })
 
+const Admin = mongoose.model('Admin', adminSchema);
 const Mat = mongoose.model('Mat', matSchema);
 const User = mongoose.model('User', userSchema);
 
-module.exports = { Mat, User };
+module.exports = { Admin, Mat, User };
