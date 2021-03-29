@@ -20,4 +20,12 @@ app.get('/bank', (req, res) => {
   })
 })
 
+app.get('/login', (req, res) => {
+  res.sendFile(path.join(__dirname, '../client/dist/index.html'), (err) => {
+    if (err) {
+      res.status(500).send(err)
+    }
+  })
+})
+
 app.listen(port, console.log(`Listening on port ${port}!`));
