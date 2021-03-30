@@ -12,7 +12,7 @@ const LandingForm = (props) => {
     { onChange: (event) => setCharacterName(event.target.value), label: 'Character Name' },
     { onChange: (event) => setRealm(event.target.value), label: 'Realm' },
     { onChange: (event) => setSpec(event.target.value), label: 'Spec(s) Preferred' },
-    { onChange: (event) => setBattleTag(event.target.value), label: 'Battle.net Tag' },
+    { onChange: (event) => setBattleTag(event.target.value), label: 'Battle.net Tag', required: 'required' },
   ];
 
   const submitUser = async (event) => {
@@ -32,7 +32,7 @@ const LandingForm = (props) => {
       {inputs.map((input, index) => {
         return <div className="input-field-group-landing" key={index}>
           <label className="form-label-landing">{input.label}</label>
-          <input className="form-input-landing" onChange={input.onChange} />
+          <input className="form-input-landing" onChange={input.onChange} required={input.required} />
         </div>
       })}
       <div className="input-field-group-landing landing-message-group">
