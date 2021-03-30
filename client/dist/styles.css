@@ -168,6 +168,15 @@ body {
   z-index: 5;
 }
 
+.heading-navbar {
+  box-sizing: border-box;
+  display: inline-block;
+  font-size: clamp(30px, 3vw, 48px);
+  padding: 0 0 0 1em;
+  text-align: left;
+  width: 50%;
+}
+
 .input-field-group {
   font-family: 'Open Sans', sans-serif;
   margin: 20px 0;
@@ -203,6 +212,26 @@ body {
   font-family: 'Open Sans', sans-serif;
   margin: 0 auto;
   padding: 3em 10%;
+}
+
+.link {
+  color: inherit;
+  font-family: 'Inter', sans-serif;
+  text-decoration: none;
+  transition: 0.3s ease;
+}
+
+.link:hover {
+  color: #80dbff;
+}
+
+.links-wrapper {
+  box-sizing: border-box;
+  display: inline-flex;
+  font-size: clamp(14px, 2vw, 28px);
+  justify-content: space-around;
+  padding: 0 1em;
+  width: 50%;
 }
 
 .login-form {
@@ -308,6 +337,11 @@ body {
   margin: 0;
   padding: 10px;
   text-align: center;
+}
+
+.navbar-container {
+  background-color: #0f3b57;
+  color: #fff;
 }
 
 .subheading {

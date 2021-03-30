@@ -2,6 +2,7 @@ import axios from 'axios';
 import Inventory from '../pages/Inventory.js';
 import Landing from '../pages/Landing.js';
 import Login from '../pages/Login.js';
+import Navbar from '../components/Navbar.js';
 import React, { useEffect, useState } from 'react';
 import { BrowserRouter as Router, Switch, Redirect, Route } from 'react-router-dom';
 
@@ -146,6 +147,7 @@ const App = () => {
 
   return (
     <>
+      <Navbar />
       <Router>
         <Switch>
           <Route exact path="/">
