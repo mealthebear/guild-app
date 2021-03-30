@@ -32,7 +32,11 @@ const Landing = (props) => {
         </p>
       </section>
       <section className="landing-section landing-form">
-        <LandingForm createUser={props.createUser} />
+        <LandingForm 
+          createUser={props.createUser}
+          messageType={props.messageType}
+          showMessage={props.showMessage}
+        />
       </section>
     </>
   )

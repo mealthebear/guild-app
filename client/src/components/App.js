@@ -11,6 +11,8 @@ const App = () => {
   const [listOfMats, setList] = useState([]);
   const [messageType, setMessageType] = useState(false);
   const [showMessage, setMessageBoolean] = useState(false);
+  const [registerMessageType, setRegisterMessage] = useState(false);
+  const [showRegisterMessage, setRegisterBoolean] = useState(false);
 
   useEffect(() => {
     verifyUser()
@@ -65,8 +67,12 @@ const App = () => {
     event.preventDefault();
     try {
       const response = await axios.post('/api/users', user);
+      setRegisterMessage(true);
+      setRegisterBoolean(true);
       return response;
     } catch (err) {
+      setRegisterMessage(false);
+      setRegisterBoolean(true);
       console.log(err);
     }
   }
@@ -157,7 +163,11 @@ const App = () => {
       <Router>
         <Switch>
           <Route exact path="/">
-            <Landing createUser={createUser} />
+            <Landing 
+              createUser={createUser} 
+              messageType={registerMessageType} 
+              showMessage={showRegisterMessage} 
+            />
           </Route>
           <Route exact path="/bank">
             {authorizedUser ? 

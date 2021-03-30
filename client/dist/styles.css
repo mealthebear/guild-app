@@ -354,6 +354,24 @@ body {
   color: #fff;
 }
 
+.register-message {
+  box-sizing: border-box;
+  display: inline-block;
+  font-size: clamp(14px, 3vw, 24px);
+  margin-left: 5%;
+  padding: 20px 0 0;
+  text-align: center;
+  width: 45%;
+}
+
+.register-message-error {
+  color: #e34949
+}
+
+.register-message-success {
+  color: #01bd6f;
+}
+
 .subheading {
   font-family: 'Inter', sans-serif;
   font-size: 1.75em;

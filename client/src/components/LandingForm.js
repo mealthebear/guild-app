@@ -1,3 +1,4 @@
+import RegisterMessage from './RegisterMessage.js';
 import React, { useState } from 'react';
 
 const LandingForm = (props) => {
@@ -39,6 +40,7 @@ const LandingForm = (props) => {
         <textarea className="message-input-landing" onChange={(event) => setMessage(event.target.value)} />
       </div>
       <input className="heading-landing-button landing-form-submit" type="submit" value="Send Message" />
+      {props.showMessage ? <RegisterMessage messageType={props.messageType} /> : null}
     </form>
   )
 }
