@@ -65,6 +65,10 @@ body {
   z-index: 10;
 }
 
+.error-message {
+  background-color: #e34949;
+}
+
 .form-input {
   border: 1px solid #c3cad8;
   border-radius: 4px;
@@ -244,6 +248,13 @@ body {
   width: 40%;
 }
 
+.login-message {
+  color: #fff;
+  font-family: 'Open Sans', sans-serif;
+  padding: 0.75em;
+  text-align: center;
+}
+
 .mat-entry {
   background-color: #f3f3f3;
   border-radius: 10px;
@@ -358,6 +369,10 @@ body {
   margin: 0;
 }
 
+.success-message {
+  background-color: #01bd6f;
+}
+
 .update-button {
   background-color: #008cff;
   color: #fff;
@@ -367,4 +382,11 @@ body {
 
 .update-button:hover {
   background-color: #006fc9;
+}
+
+@media only screen and (max-width: 400px) {
+  .login-form {
+    padding: 1em 3em;
+    top: 69%;
+  }
 }
