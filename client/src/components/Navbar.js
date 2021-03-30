@@ -9,7 +9,7 @@ const Navbar = (props) => {
 
   return (
     <section className="navbar-container">
-      <h1 className="heading heading-navbar">Défiance</h1>
+      <a className="link" href="/"><h1 className="heading heading-navbar">Défiance</h1></a>
       <div className="links-wrapper">
         {links.map((link, index) => {
           return <a className="link" href={link.url} key={index}>{link.title}</a>
