@@ -35,12 +35,11 @@ const App = () => {
         setMessageType(true);
         setMessageBoolean(true);
       } else {
-        console.log('Login credentials invalid');
         setMessageType(false);
         setMessageBoolean(true);
       }
     } catch (err) {
-      console.log(err);
+      return err;
     }
   }
 
@@ -59,7 +58,7 @@ const App = () => {
       const matList = await getAllMats();
       setList(matList.data);
     } catch (err) {
-      console.log(err);
+      return err;
     }
   }
 
@@ -73,7 +72,7 @@ const App = () => {
     } catch (err) {
       setRegisterMessage(false);
       setRegisterBoolean(true);
-      console.log(err);
+      return err;
     }
   }
 
@@ -86,7 +85,7 @@ const App = () => {
       const matList = await getAllMats();
       setList(matList.data);
     } catch (error) {
-      console.log(error);
+      return error;
     }
   }
 
@@ -97,7 +96,7 @@ const App = () => {
       });
       return response;
     } catch (err) {
-      console.log(err);
+      return err;
     }
   }
 
@@ -106,7 +105,7 @@ const App = () => {
       const response = await axios.get('/api/mats');
       return response;
     } catch (err) {
-      console.log(err);
+      return err;
     }
   }
 
@@ -114,7 +113,7 @@ const App = () => {
     try {
       const response = await axios.post('/auth', user)
     } catch (err) {
-      console.log(err);
+      return err;
     }
   }
 
@@ -125,7 +124,6 @@ const App = () => {
       })
       return response;
     } catch (err) {
-      console.log(err);
       return err;
     }
   }
@@ -140,7 +138,7 @@ const App = () => {
       const matList = await getAllMats();
       setList(matList.data);
     } catch (err) {
-      console.log(err);
+      return err;
     }
   }
 
