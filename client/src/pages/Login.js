@@ -4,7 +4,11 @@ import React, { useState } from 'react';
 const Login = (props) => {
   return (
     <>
-      <UserLoginForm authenticateUser={props.authenticateUser} />
+      <UserLoginForm 
+        authenticateUser={props.authenticateUser}
+        messageType={props.messageType}
+        showMessage={props.showMessage}
+      />
     </>
   )
 }

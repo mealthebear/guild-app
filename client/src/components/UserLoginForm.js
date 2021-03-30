@@ -1,3 +1,4 @@
+import LoginMessage from '../components/LoginMessage.js';
 import React, { useState } from 'react';
 
 const UserLoginForm = (props) => {
@@ -27,6 +28,7 @@ const UserLoginForm = (props) => {
         <input className="form-input form-input-login" onChange={(event) => setPassword(event.target.value)} placeholder="Enter Password" required />
       </div>
       <input className="confirm-button confirm-button-login" type="submit" value="Login" />
+      {props.showMessage ? <LoginMessage messageType={props.messageType} /> : null}
     </form>
     </>
   )

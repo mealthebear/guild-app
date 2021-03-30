@@ -9,6 +9,8 @@ import { BrowserRouter as Router, Switch, Redirect, Route } from 'react-router-d
 const App = () => {
   const [authorizedUser, setAuthorization] = useState(false);
   const [listOfMats, setList] = useState([]);
+  const [messageType, setMessageType] = useState(false);
+  const [showMessage, setMessageBoolean] = useState(false);
 
   useEffect(() => {
     verifyUser()
@@ -28,8 +30,12 @@ const App = () => {
       if (response.data.length) {
         const { username } = user;
         getToken({ username });
+        setMessageType(true);
+        setMessageBoolean(true);
       } else {
         console.log('Login credentials invalid');
+        setMessageType(false);
+        setMessageBoolean(true);
       }
     } catch (err) {
       console.log(err);
@@ -169,7 +175,12 @@ const App = () => {
           <Route exact path="/login">
             {authorizedUser ? 
             <Redirect to='/bank' /> : 
-            <Login authenticateUser={authenticateUser} authUser={authorizedUser} />
+            <Login 
+              authenticateUser={authenticateUser} 
+              authUser={authorizedUser} 
+              messageType={messageType} 
+              showMessage={showMessage}
+            />
             }
           </Route>
         </Switch>
