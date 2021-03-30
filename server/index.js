@@ -52,7 +52,7 @@ app.get('/verify-token', (req, res) => {
 
   jwt.verify(token, process.env.ACCESS_TOKEN_SECRET, (err, user) => {
     if (err) {
-      return res.sendStatus(403);
+      return err;
     } else {
       return res.sendStatus(200);
     }
