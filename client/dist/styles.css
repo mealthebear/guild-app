@@ -386,7 +386,8 @@ body {
 
 @media only screen and (max-width: 400px) {
   .login-form {
-    padding: 1em 3em;
-    top: 69%;
+    padding: 1em;
+    top: 58%;
+    width: 90%;
   }
 }
