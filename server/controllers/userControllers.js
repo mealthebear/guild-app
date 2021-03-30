@@ -6,13 +6,13 @@ const {
 } = require('../../database/dbHelpers/users.js');
 
 const createUserController = (req, res) => {
-  return Promise.resolve(createUser(req.body)
+  createUser(req.body)
   .then((data) => {
     res.status(201).send(data)
   })
   .catch((err) => {
     res.status(401).send(err);
-  }));
+  });
 }
 
 const deleteUserController = (req, res) => {
